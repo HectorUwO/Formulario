@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario de Empleo</title>
+</head>
+<body>
+    <div class="container">
+        <div id="formContainer">
+            <h1>Solicitud de Empleo</h1>
+            <form id="employmentForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Nombre Completo</label>
+                    <input type="text" id="fullName" name="fullName" required 
+                           placeholder="Ej: Juan Pérez González">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="ejemplo@correo.com">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required 
+                           placeholder="Ej: 1234567890">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="position">Puesto Deseado</label>
+                    <input type="text" id="position" name="position" required 
+                           placeholder="Ej: Desarrollador Web Frontend">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Experiencia Laboral</label>
+                    <textarea id="experience" name="experience" rows="4" required 
+                              placeholder="Describe tu experiencia laboral relevante (mínimo 30 caracteres)&#10;Ej: 3 años como desarrollador web en empresa XYZ, especializado en..."></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="education">Educación</label>
+                    <textarea id="education" name="education" rows="3" required 
+                              placeholder="Describe tu formación académica (mínimo 20 caracteres)&#10;Ej: Ingeniero en Sistemas, Universidad ABC, 2018-2022"></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Fecha de Nacimiento</label>
+                    <input type="date" id="birthdate" name="birthdate" required 
+                           max="2005-12-31">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salario Deseado</label>
+                    <input type="number" id="salary" name="salary" min="0" step="1000" required 
+                           placeholder="Ej: 50000">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="website">Sitio Web/Portfolio</label>
+                    <input type="url" id="website" name="website" 
+                           placeholder="https://www.tuportfolio.com">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label>Disponibilidad</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="fullTime" name="availability" value="fullTime">
+                        <label for="fullTime">Tiempo Completo</label>
+                        <input type="checkbox" id="partTime" name="availability" value="partTime">
+                        <label for="partTime">Medio Tiempo</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Nivel de Inglés</label>
+                    <div class="radio-group">
+                        <input type="radio" id="basic" name="english" value="basic" required>
+                        <label for="basic">Básico</label>
+                        <input type="radio" id="intermediate" name="english" value="intermediate">
+                        <label for="intermediate">Intermedio</label>
+                        <input type="radio" id="advanced" name="english" value="advanced">
+                        <label for="advanced">Avanzado</label>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </div>
+        <div id="successMessage" style="display: none;">
+            <h2>¡Solicitud enviada correctamente!</h2>
+            <button onclick="window.location.reload()">Enviar otra solicitud</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
